@@ -1,0 +1,153 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremely sad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_facilities
+  examples: |
+    - What facilities do you have?
+    - Do you have a pool?
+    - Is there a gym?
+    - Tell me about your spa services.
+    - Are pets allowed?
+    - Do you offer free Wi-Fi?
+    - Is parking available?
+    - What kind of leisure facilities can guests use?
+
+- intent: book_room
+  examples: |
+    - I want to book a room.
+    - Can I reserve a suite for next weekend?
+    - How do I book a room for three people?
+    - I'm looking to book a deluxe room.
+    - What's the process for booking a room?
+
+- intent: cancel_reservation
+  examples: |
+    - I need to cancel my booking.
+    - How can I cancel my reservation?
+    - Is it possible to cancel my room reservation?
+    - I want to cancel my hotel booking.
+
+- intent: ask_location
+  examples: |
+    - Where is the hotel located?
+    - Can you give me directions to the hotel?
+    - How far is the hotel from the airport?
+    - Is the hotel located near downtown?
+
+- intent: ask_checkin_checkout
+  examples: |
+    - What time is check-in?
+    - Can I check out late?
+    - What are the check-in and check-out times?
+    - Is early check-in possible?
+
+- intent: request_room_service
+  examples: |
+    - How do I order room service?
+    - Can I see the room service menu?
+    - Is room service available 24/7?
+    - I'd like to order breakfast to my room.
+
+- intent: ask_restaurant
+  examples: |
+    - Is there a restaurant in the hotel?
+    - Can I book a table at the restaurant?
+    - What type of cuisine does the restaurant serve?
+    - What are the opening hours of the restaurant?
+    - i am hungry
+    - i want to eat
+
+- intent: report_issue
+  examples: |
+    - There's an issue with my room.
+    - My air conditioner is not working.
+    - I have a complaint about the cleanliness.
+    - The Wi-Fi connection is really poor in my room.

@@ -1,0 +1,215 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: the curious traveler
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_location
+  - action: utter_ask_location
+  - intent: ask_checkin_checkout
+  - action: utter_ask_checkin_checkout
+  - intent: ask_restaurant
+  - action: utter_ask_restaurant
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: solving the puzzle
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: report_issue
+  - action: utter_report_issue
+  - intent: deny
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: late night cravings
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_room_service
+  - action: utter_request_room_service
+  - intent: affirm
+  - action: utter_did_that_help
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the indecisive guest
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_room
+  - action: utter_book_room
+  - intent: deny
+  - action: utter_ask_checkin_checkout
+  - intent: ask_checkin_checkout
+  - action: utter_ask_checkin_checkout
+  - intent: cancel_reservation
+  - action: utter_cancel_reservation
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: the explorer
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_location
+  - action: utter_ask_location
+  - intent: ask_facilities
+  - action: utter_ask_facilities
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: the gourmet guest
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_restaurant
+  - action: utter_ask_restaurant
+  - intent: affirm
+  - action: utter_happy
+  - intent: request_room_service
+  - action: utter_request_room_service
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the serene stay
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_facilities
+  - action: utter_ask_facilities
+  - intent: affirm
+  - action: utter_ask_restaurant
+  - intent: ask_restaurant
+  - action: utter_ask_restaurant
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the tech-savvy traveler
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_facilities
+  - action: utter_ask_facilities
+  - intent: deny
+  - action: utter_ask_checkin_checkout
+  - intent: affirm
+  - action: utter_happy
+  - intent: report_issue
+  - action: utter_report_issue
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the early bird catches the worm
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_checkin_checkout
+  - action: utter_ask_checkin_checkout
+  - intent: affirm
+  - action: utter_happy
+  - intent: book_room
+  - action: utter_book_room
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the midnight oil burner
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_room_service
+  - action: utter_request_room_service
+  - intent: deny
+  - action: utter_ask_restaurant
+  - intent: ask_restaurant
+  - action: utter_ask_restaurant
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the unexpected journey
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: book_room
+  - action: utter_book_room
+  - intent: cancel_reservation
+  - action: utter_cancel_reservation
+  - intent: affirm
+  - action: utter_ask_location
+  - intent: ask_location
+  - action: utter_ask_location
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: the zen seeker
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_facilities
+  - action: utter_ask_facilities
+  - intent: affirm
+  - action: utter_ask_checkin_checkout
+  - intent: ask_checkin_checkout
+  - action: utter_ask_checkin_checkout
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye

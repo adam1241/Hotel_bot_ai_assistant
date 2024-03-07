@@ -1,0 +1,57 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Greet the user back when they say hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Respond to facility inquiries
+  steps:
+  - intent: ask_facilities
+  - action: utter_ask_facilities
+
+- rule: Initiate room booking process
+  steps:
+  - intent: book_room
+  - action: utter_book_room
+
+- rule: Handle reservation cancellation requests
+  steps:
+  - intent: cancel_reservation
+  - action: utter_cancel_reservation
+
+- rule: Provide hotel location information
+  steps:
+  - intent: ask_location
+  - action: utter_ask_location
+
+- rule: Inform about check-in and check-out times
+  steps:
+  - intent: ask_checkin_checkout
+  - action: utter_ask_checkin_checkout
+
+
+
+- rule: Answer queries about the restaurant
+  steps:
+  - intent: ask_restaurant
+  - action: utter_ask_restaurant
+
+- rule: Address user-reported issues
+  steps:
+  - intent: report_issue
+  - action: utter_report_issue
+
+

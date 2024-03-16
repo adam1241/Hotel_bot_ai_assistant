@@ -2,34 +2,6 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
-
-
 - story: the curious traveler
   steps:
   - intent: greet
@@ -40,10 +12,8 @@ stories:
   - action: utter_ask_checkin_checkout
   - intent: ask_restaurant
   - action: utter_ask_restaurant
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
-  - action: utter_goodbye
+  - action: utter_goodbye_not_booked
 
 - story: solving the puzzle
   steps:
@@ -55,6 +25,7 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+  - action: utter_ask_more_help
   - intent: goodbye
   - action: utter_goodbye
 
@@ -64,12 +35,9 @@ stories:
   - action: utter_greet
   - intent: request_room_service
   - action: utter_request_room_service
-  - intent: affirm
-  - action: utter_did_that_help
-  - intent: mood_great
-  - action: utter_happy
-  - intent: goodbye
-  - action: utter_goodbye
+  - action: utter_ask_more_help
+  - intent: deny
+  - action: utter_goodbye_booked
 
 - story: the indecisive guest
   steps:
@@ -84,6 +52,11 @@ stories:
   - intent: cancel_reservation
   - action: utter_cancel_reservation
   - intent: affirm
+  - action: utter_report_issue
+  - action: utter_ask_more_help
+  - intent: affirm
+  - action: utter_ask_more_help
+  - intent: deny
   - action: utter_goodbye
 
 - story: the explorer
@@ -95,12 +68,14 @@ stories:
   - intent: ask_facilities
   - action: utter_ask_facilities
   - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - action: utter_mood_unhappy
+  - action: utter_ask_location
   - intent: affirm
-  - action: utter_happy
-  - intent: goodbye
+  - action: utter_request_room_service
+  - action: utter_ask_more_help
+  - intent: deny
   - action: utter_goodbye
+
 - story: the gourmet guest
   steps:
   - intent: greet
@@ -108,7 +83,7 @@ stories:
   - intent: ask_restaurant
   - action: utter_ask_restaurant
   - intent: affirm
-  - action: utter_happy
+  - action: utter_ask_more_help
   - intent: request_room_service
   - action: utter_request_room_service
   - intent: mood_great

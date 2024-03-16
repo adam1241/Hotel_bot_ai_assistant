@@ -1,12 +1,6 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
   - bot_challenge
   - ask_facilities
   - book_room
@@ -16,26 +10,16 @@ intents:
   - request_room_service
   - ask_restaurant
   - report_issue
+  - affirm
+  - deny
+  - goodbye
 
 responses:
   utter_greet:
-  - text: "Welcome to   حي محسن ( mohcine's neighborhood ) , a place where luxury meets comfort! How can I enhance your stay today?"
-
-  utter_cheer_up:
-  - text: "Everyone needs a little pick-me-up sometimes. Here's something to brighten your day:"
-    image: "https://www.bing.com/images/search?view=detailV2&ccid=xEpmjz8j&id=3B027CA41C12FFC3F7C0425C8F6127AFAB0710CF&thid=OIP.xEpmjz8jTvt3e2QPBa1olAAAAA&mediaurl=https%3a%2f%2fi.pinimg.com%2foriginals%2f5d%2f7a%2fc2%2f5d7ac2e301b3b62ac21dc9dca8e6b11e.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.c44a668f3f234efb777b640f05ad6894%3frik%3dzxAHq68nYY9cQg%26pid%3dImgRaw%26r%3d0&exph=710&expw=474&q=smiling+morocan&simid=607989936127826747&FORM=IRPRST&ck=033A68788F6575D9EC4D8A94F3B6C52C&selectedIndex=0&itb=0&ajaxhist=0&ajaxserp=0"
-
-  utter_did_that_help:
-  - text: "I hope that brought a smile to your face. Is there anything else I can assist you with?"
-
-  utter_happy:
-  - text: "Thrilled to hear that! If you have any more questions or need further assistance, feel free to ask."
-
-  utter_goodbye:
-  - text: "It was a pleasure assisting you. We look forward to welcoming you back soon. Safe travels!"
+  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today?"
 
   utter_iamabot:
-  - text: "I'm your virtual concierge, powered by Rasa, here to ensure your inquiries and needs are addressed 24/7."
+  - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
   utter_ask_facilities:
   - text: "Our hotel is equipped with state-of-the-art facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
@@ -53,14 +37,40 @@ responses:
   - text: "Standard check-in time is from 3 PM, and check-out is by 11 AM on your departure day. Should you require an early check-in or a late check-out, please let us know in advance. We're happy to accommodate your requests based on availability and may adjust for any additional charges."
 
   utter_request_room_service:
-  - text: "Our room service menu features a wide selection of gourmet options, from classic comfort food to international cuisine, available 24/7. Whether you're craving a late-night snack or a sumptuous breakfast in bed, just let me know what you'd like to order, or if you'd like recommendations tailored to your taste preferences."
+  - text: "We provide a vaste choice of services. if you want to benefit call in the phone provided the 2020 and ask your service. you will get an answer 24/7 !"
 
   utter_ask_restaurant:
-  - text: "شهيوات  ادم  ( Adam's Delices) at our hotel serves an exquisite blend of local and international cuisine, prepared by our renowned chef. Breakfast is available from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 6 PM to 11 PM. Would you prefer to book a table with a specific view or occasion in mind? We also offer private dining options for special moments."
+  - text: " Adam's Delices at our hotel serves an exquisite blend of local and international cuisine, prepared by our renowned chef. Breakfast is available from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 6 PM to 11 PM. Would you prefer to book a table with a specific view or occasion in mind? We also offer private dining options for special moments."
 
   utter_report_issue:
   - text: "We strive to provide exceptional service and accommodations, so I'm sorry to hear about your issue. Could you please provide more details about the problem? Whether it's a maintenance issue, a request for additional amenities, or feedback about our services, we're here to help and make it right."
+  
+  utter_info_provided:
+  - text: " I'll execute yut request !"
 
+  utter_mood_unhappy:
+  - text: " I'm sorry to hear that !"
+
+  utter_info_provided_sad:
+  - text: "how sad !"
+
+  utter_did_that_help:
+  - text: "did that help??"
+
+  utter_happy:
+  - text: "I am glad !"
+
+  utter_ask_more_help:
+  - text: "do you have any other questions ? I ld love to help =D"
+
+  utter_goodbye:
+  - text: "bye! ;)"
+
+  utter_goodbye_booked:
+  - text: "We are glad that you have shown interest in our hotel! You will surely enjoy your time with us! ;)"
+
+  utter_goodbye_not_booked:
+  - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

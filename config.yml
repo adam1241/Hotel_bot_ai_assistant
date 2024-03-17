@@ -13,12 +13,19 @@ language: "en"
 
 pipeline:
   - name: SpacyNLP
+    # language model to load
+    model: "en_core_web_md"
   - name: SpacyTokenizer
-  - name: SpacyFeaturizer
+  - name: SpacyFeaturizer # ConveRTFeaturizer  LanguageModelFeaturizer
+    alias:  spacy_feat
   - name: RegexFeaturizer
+    alias: regex
   - name: LexicalSyntacticFeaturizer
+    alias: lex_synt
   - name: CountVectorsFeaturizer
+    alias: cvf_words
   - name: CountVectorsFeaturizer
+    alias: cvf_chars
     analyzer: "char_wb"
     min_ngram: 1
     max_ngram: 4
@@ -26,8 +33,9 @@ pipeline:
     epochs: 100
   - name: EntitySynonymMapper
   - name: ResponseSelector
+    featurizers: ["spacy_feat", "cvf_words"]  # Discard RegexFeaturizer and LexicalSyntacticFeaturizer for response selection
     epochs: 100
-
+# Add : FallbackClassifier
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

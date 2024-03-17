@@ -61,7 +61,7 @@ responses:
   - text: "I am glad !"
 
   utter_ask_more_help:
-  - text: "do you have any other questions ? I ld love to help =D"
+  - text: "do you have any other questions ? I'd love to help =D"
 
   utter_goodbye:
   - text: "bye! ;)"

@@ -26,7 +26,7 @@ rules:
   steps:
   - intent: cancel_reservation
   - action: utter_cancel_reservation
-  - action: utter_ask_more_help
+  # - action: utter_ask_more_help
 
 - rule:  hotel location 
   steps:
@@ -38,10 +38,15 @@ rules:
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
 
-- rule: bye_booked
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye_booked
+# - rule: bye_booked
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye_booked
+
+# - rule: bye_not_booked
+#   steps:
+#   - intent: goodbye
+#   - action: utter_goodbye_not_booked
 
 - rule: Answer queries about the restaurant
   steps:

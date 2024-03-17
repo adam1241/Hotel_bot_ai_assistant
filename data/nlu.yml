@@ -2,6 +2,22 @@ version: "3.1"
 
 nlu:
 
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
 - intent: affirm
   examples: |
     - yes
@@ -63,19 +79,6 @@ nlu:
 
 - intent: ask_facilities
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
     - What facilities do you have?
     - Do you have a pool?
     - Is there a gym?

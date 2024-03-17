@@ -1,7 +1,10 @@
 version: "3.1"
 
 intents:
+  - greet
   - bot_challenge
+  - mood_great
+  - mood_unhappy
   - ask_facilities
   - book_room
   - cancel_reservation
@@ -20,6 +23,10 @@ responses:
 
   utter_iamabot:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_ask_facilities:
   - text: "Our hotel is equipped with state-of-the-art facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
@@ -51,6 +58,9 @@ responses:
   utter_mood_unhappy:
   - text: " I'm sorry to hear that !"
 
+  utter_mood_great:
+  - text: " I am happy to hear that!"
+
   utter_info_provided_sad:
   - text: "how sad !"
 
@@ -71,6 +81,7 @@ responses:
 
   utter_goodbye_not_booked:
   - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

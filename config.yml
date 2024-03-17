@@ -16,7 +16,9 @@ pipeline:
     # language model to load
     model: "en_core_web_md"
   - name: SpacyTokenizer
-  - name: SpacyFeaturizer # ConveRTFeaturizer  LanguageModelFeaturizer
+  - name: LanguageModelFeaturizer # ConveRTFeaturizer  LanguageModelFeaturizer
+    model_name: "distilbert"
+    model_weights: "distilbert-base-uncased"
     alias:  spacy_feat
   - name: RegexFeaturizer
     alias: regex
@@ -36,20 +38,29 @@ pipeline:
     featurizers: ["spacy_feat", "cvf_words"]  # Discard RegexFeaturizer and LexicalSyntacticFeaturizer for response selection
     epochs: 100
   - name: FallbackClassifier
-    threshold: 0.7
+    threshold: 0.5
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
-policies: null
+policies:
+  - name: AugmentedMemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
-#   - name: MemoizationPolicy
-#   - name: RulePolicy
-#   - name: UnexpecTEDIntentPolicy
-#     max_history: 5
-#     epochs: 100
-#   - name: TEDPolicy
-#     max_history: 5
-#     epochs: 100
-#     constrain_similarities: true
+  # - name: MemoizationPolicy
+  # - name: RulePolicy
+  # - name: UnexpecTEDIntentPolicy
+  #   max_history: 5
+  #   epochs: 100
+  # - name: TEDPolicy
+  #   max_history: 5
+  #   epochs: 100
+  #   constrain_similarities: true

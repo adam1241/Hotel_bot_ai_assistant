@@ -58,4 +58,7 @@ rules:
   - intent: report_issue
   - action: utter_report_issue
 
-
+- rule: Ask the user to rephrase in case of low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase

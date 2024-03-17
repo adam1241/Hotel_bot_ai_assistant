@@ -16,6 +16,7 @@ intents:
   - affirm
   - deny
   - goodbye
+  - nlu_fallback
 
 responses:
   utter_greet:
@@ -81,6 +82,9 @@ responses:
 
   utter_goodbye_not_booked:
   - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
+
+  utter_please_rephrase:
+  - text:  "I'm sorry, I didn't quite understand that. Could you rephrase?"
 
 session_config:
   session_expiration_time: 60

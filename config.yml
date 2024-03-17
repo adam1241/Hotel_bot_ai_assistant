@@ -35,7 +35,8 @@ pipeline:
   - name: ResponseSelector
     featurizers: ["spacy_feat", "cvf_words"]  # Discard RegexFeaturizer and LexicalSyntacticFeaturizer for response selection
     epochs: 100
-# Add : FallbackClassifier
+  - name: FallbackClassifier
+    threshold: 0.7
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

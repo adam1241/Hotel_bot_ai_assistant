@@ -30,7 +30,7 @@ responses:
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_ask_facilities:
-  - text: "Our hotel is equipped with state-of-the-art facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
+  - text: "Our hotel is equipped with facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
 
   utter_book_room:
   - text: "I'd be delighted to assist with your reservation. Could you please specify the room type you're interested in (e.g., standard, deluxe, suite), the check-in and check-out dates, and any special preferences you might have? For instance, would you prefer a room on a higher floor, or perhaps one with a sea view?"
@@ -54,7 +54,7 @@ responses:
   - text: "We strive to provide exceptional service and accommodations, so I'm sorry to hear about your issue. Could you please provide more details about the problem? Whether it's a maintenance issue, a request for additional amenities, or feedback about our services, we're here to help and make it right."
   
   utter_info_provided:
-  - text: " I'll execute yut request !"
+  - text: " I'll execute your request !"
 
   utter_mood_unhappy:
   - text: " I'm sorry to hear that !"

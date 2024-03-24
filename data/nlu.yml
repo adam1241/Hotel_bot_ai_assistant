@@ -117,12 +117,44 @@ nlu:
 
 - intent: affirm
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+      - yes 
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+      - ya
+      - yep
+      - sure
+      - absolutely
+      - definitely
+      - affirmative
+      - right
+      - OK
+      - okay
+      - yeah
+      - yea
+      - definitely
+      - absolutely
+      - for sure
+      - agreed
+      - precisely
+      - surely
+      - alright
+      - fine
+      - agreed
+      - undoubtedly
+      - unquestionably
+      - undoubtedly
+      - indubitably
+      - precisely
+      - righto
+      - roger
+      - affirmative
+      - positively
+      - indeed
+      - naturally
+      - undoubtedly
+      - exactly
 
 - intent: deny
   examples: |

@@ -36,7 +36,55 @@ from rasa_sdk.executor import CollectingDispatcher
 import re
 from datetime import datetime
 
+import requests
+import csv
 
+ 
+
+def read_csv_file(name,email):
+    filename='Clients.csv'
+    data = []
+    with open(filename, 'r') as file:
+        csv_reader = csv.DictReader(file)
+        for row in csv_reader:
+            Name = row['name']
+            Email = row['email']
+            if name == Name and Email == email :
+                spa = row['spa'] == 'True'
+                luggage = row['luggage'] == 'True'
+                cib = row['cib'] == 'True'
+                bill = float(row['bill'])
+                loyalty = row['loyalty'] == 'True'
+                payment = row['payment'] == 'True'
+                payment_method = row['payment_method']
+                room_booked = row['room_booked']
+                time_room = row['time_room']
+                extra_bed = row['extra_bed'] == 'True'
+                
+                data.append({
+                    'name': Name,
+                    'email': Email,
+                    'spa': spa,
+                    'luggage': luggage,
+                    'cib': cib,
+                    'bill': bill,
+                    'loyalty': loyalty,
+                    'payment': payment,
+                    'payment_method': payment_method,
+                    'room_booked': room_booked,
+                    'time_room': time_room,
+                    'extra_bed': extra_bed
+                })
+                return data
+            
+    return None
+def provide_name(name,email):
+    data= read_csv_file(name,email)
+    if data == None:
+        return 'you are a new client ,welcome to our hotel ! if you are already a client please ask me to repeat collecting your info'
+    else:
+        return 'welcome back sir, how can i help you?'
+    
 class ActionResponseToDate(Action):
 
     def name(self)-> Text:
@@ -70,8 +118,6 @@ class ActionResponseToDate(Action):
     def extract_rooms(in_date,out_date) :
         pass
             
-        
-    
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         user_response = tracker.latest_message.get("text")
         dates = self.extract_dates(user_response)

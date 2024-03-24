@@ -1,5 +1,7 @@
-# before developping:
-- don't forget to use
+# Hotel_bot_assistant
+
+## Installation:
+- There are external dependencies to install for this code.   Please follow the following steps:
 
 ```
 pip install -U pip setuptools wheel

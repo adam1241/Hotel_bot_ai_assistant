@@ -4,19 +4,116 @@ nlu:
 
 - intent: greet
   examples: |
+    - goodmorning
+    - goodevening
+    - moorning
+    - evning
+    - helo there
+    - g'morning
+    - gmorning
+    - gmornin
+    - g'evening
+    - gevening
+    - g'devening
+    - goodmorningg
+    - goodevenning
+    - good mornin
+    - good evnin
+    - hii
+    - heyya
+    - holaa
+    - g'dayy
+    - heyyo
+    - gudmorningg
+    - goodevenningg
+    - moorningg
+    - evningg
+    - howdyy
+    - helloo
+    - heyyhey
+    - heloo
+    - gudmornin
+    - gudevnin
+    - hellow
+    - hiy
+    - heyyou
+    - hellohey
+    - helloy
+    - hiallo
+    - heyythere
+    - hiiyo
+    - helloyou
+    - hiyathere
+    - helloohey
+    - hiiya
+    - hellooo
+    - heyya
+    - howdy
+    - goodmorn
+    - goodeve
+    - moornin
+    - evenin
+    - helothere
+    - g'morn
+    - gmorn
+    - g'even
+    - geve
+    - g'dev
+    - goodmornin
+    - goodeve
+    - goodmornin
+    - good morn
+    - good eve
+    - hiyoo
+    - hui
+    - heyy
+    - hiyo
+    - hellohey
+    - helo
+    - hie
+    - hiyath
+    - heyye
+    - heyyo
+    - howdy
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
+    - hi there
+    - hiya
+    - hiyo
+    - hola
     - hey there
-    - let's go
+    - hey yo
     - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - hey ya
+    - hey you
+    - heyhey
+    - hiii
+    - heyya
+    - holaa
+    - hellooo
+    - heyy
+    - heyo
+    - hiiyaa
+    - howdy
+    - hiyaaa
+    - heyyou
+    - hiiiya
+    - hiyathere
+    - hiiya
+    - hiiya
+    - hiyee
+    - hiyoo
+    - hiya
+    - hiyath
+    - hiyathere
+    - hiyayou
+    - hiyathere
+    - hiyoo
+    - hiyayou
+    - hiyathere
+    - hiyayou
+    - hiyathere
 
 - intent: affirm
   examples: |

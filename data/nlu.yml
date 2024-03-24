@@ -317,3 +317,19 @@ nlu:
     - I need a room for [2024-12-10](check_in) until [2024-12-15](check_out)
     - Can you reserve a room starting from [2024-12-25](check_in) to [2024-12-30](check_out)?
     - I want to stay from [2024-12-01](check_in) to [2024-12-05](check_out)
+-intent: response_restauration
+  examples: |
+    - Do you offer breakfast?
+    - Is breakfast included in the stay?
+    - What are the breakfast options?
+    - Can I have breakfast in my room?
+    - Is there a breakfast buffet?
+    - What time does breakfast start?
+    - Do you serve lunch at the hotel?
+    - Are there any lunch options available?
+    - Can I order lunch to my room?
+    - What kind of dinner options do you have?
+    - Is there a dinner reservation required?
+    - Do you offer room service for dinner?
+    - What time does dinner service end?
+

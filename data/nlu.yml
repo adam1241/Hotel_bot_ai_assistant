@@ -317,7 +317,7 @@ nlu:
     - I need a room for [2024-12-10](check_in) until [2024-12-15](check_out)
     - Can you reserve a room starting from [2024-12-25](check_in) to [2024-12-30](check_out)?
     - I want to stay from [2024-12-01](check_in) to [2024-12-05](check_out)
--intent: response_restauration
+- intent: response_restauration
   examples: |
     - Do you offer breakfast?
     - Is breakfast included in the stay?

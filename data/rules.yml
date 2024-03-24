@@ -40,7 +40,7 @@ rules:
 
 - rule: available rooms
   steps:
-  -intent: reponse_to_date
+  -intent: response_to_date
   -action: action_response_to_date
 
 # - rule: bye_booked

@@ -219,11 +219,7 @@ nlu:
 
 - intent: book_room
   examples: |
-    - I want to book a room.
-    - Can I reserve a suite for next weekend?
-    - How do I book a room for three people?
-    - I'm looking to book a deluxe room.
-    - What's the process for booking a room?
+    "nooooooo"
 
 - intent: cancel_reservation
   examples: |
@@ -310,6 +306,17 @@ nlu:
     - sayonara
     - see ya
 
+- intent: response_to_date
+  examples :
+    - I want to book a room.
+    - Can I reserve a suite for next weekend?
+    - How do I book a room for three people?
+    - I'm looking to book a deluxe room.
+    - What's the process for booking a room?
+    - Book a room from [2024-12-15](check_in) to [2024-12-20](check_out)
+    - I need a room for [2024-12-10](check_in) until [2024-12-15](check_out)
+    - Can you reserve a room starting from [2024-12-25](check_in) to [2024-12-30](check_out)?
+    - I want to stay from [2024-12-01](check_in) to [2024-12-05](check_out)
 -intent: response_restauration
   examples: |
     - Do you offer breakfast?

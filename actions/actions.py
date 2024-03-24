@@ -38,7 +38,7 @@ from datetime import datetime
 
 import requests
 import csv
-
+import pandas
  
 
 def read_csv_file(name,email):

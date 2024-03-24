@@ -309,3 +309,20 @@ nlu:
     - asta la vista
     - sayonara
     - see ya
+
+-intent: response_restauration
+  examples: |
+    - Do you offer breakfast?
+    - Is breakfast included in the stay?
+    - What are the breakfast options?
+    - Can I have breakfast in my room?
+    - Is there a breakfast buffet?
+    - What time does breakfast start?
+    - Do you serve lunch at the hotel?
+    - Are there any lunch options available?
+    - Can I order lunch to my room?
+    - What kind of dinner options do you have?
+    - Is there a dinner reservation required?
+    - Do you offer room service for dinner?
+    - What time does dinner service end?
+

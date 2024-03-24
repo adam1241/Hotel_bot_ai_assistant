@@ -122,7 +122,7 @@ responses:
   - text: "Looking for the available rooms..."
 
   utter_reponse_restauration:
-  - text: "Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
+  - text: "Restauration services are not covered by the reservation price; however,  Adam's Delices at our hotel serves an exquisite blend of local and international cuisine, prepared by our renowned chef. Breakfast is available from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 6 PM to 11 PM. Guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
 
 
 session_config:

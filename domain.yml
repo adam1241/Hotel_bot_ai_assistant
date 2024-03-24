@@ -118,10 +118,10 @@ responses:
   utter_please_rephrase:
   - text:  "Sorry, I didn't understand. Can you rephrase?"
 
-  utter_reponse_to_date:
+  utter_response_to_date:
   - text: "Looking for the available rooms..."
 
-  utter_reponse_restauration:
+  utter_response_restauration:
   - text: "Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
 
 

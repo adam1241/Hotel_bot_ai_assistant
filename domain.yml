@@ -5,6 +5,8 @@ intents:
   - bot_challenge
   - mood_great
   - mood_unhappy
+  - provide_name
+  - provide_email 
   - ask_facilities
   - book_room
   - cancel_reservation
@@ -20,14 +22,17 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today?"
+  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today? Can ypu provide me with you name?"
 
   utter_iamabot:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  provide_name:
+    - text: "Can I get your email address?"
+
+  provide_email:
+    - text: "Can I confirm your details?"
+
 
   utter_ask_facilities:
   - text: "Our hotel is equipped with facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
@@ -84,7 +89,7 @@ responses:
   - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
 
   utter_please_rephrase:
-  - text:  "I'm sorry, I didn't quite understand that. Could you rephrase?"
+  - text:  "Sorry, I didn't understand. Can you rephrase?"
 
 session_config:
   session_expiration_time: 60

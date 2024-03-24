@@ -219,11 +219,7 @@ nlu:
 
 - intent: book_room
   examples: |
-    - I want to book a room.
-    - Can I reserve a suite for next weekend?
-    - How do I book a room for three people?
-    - I'm looking to book a deluxe room.
-    - What's the process for booking a room?
+    "nooooooo"
 
 - intent: cancel_reservation
   examples: |
@@ -252,15 +248,6 @@ nlu:
     - Can I see the room service menu?
     - Is room service available 24/7?
     - I'd like to order breakfast to my room.
-
-- intent: ask_restaurant
-  examples: |
-    - Is there a restaurant in the hotel?
-    - Can I book a table at the restaurant?
-    - What type of cuisine does the restaurant serve?
-    - What are the opening hours of the restaurant?
-    - i am hungry
-    - i want to eat
 
 - intent: report_issue
   examples: |
@@ -309,6 +296,7 @@ nlu:
     - asta la vista
     - sayonara
     - see ya
+
 
 - intent: suggestion
   examples: |
@@ -487,4 +475,32 @@ nlu:
     - I didn't catch that. Can you say it again?
     - Sorry, could you repeat what you just said?
 
+
+- intent: response_to_date
+  examples : |
+    - I want to book a room.
+    - Can I reserve a suite for next weekend?
+    - How do I book a room for three people?
+    - I'm looking to book a deluxe room.
+    - What's the process for booking a room?
+    - Book a room from [2024-12-15](check_in) to [2024-12-20](check_out)
+    - I need a room for [2024-12-10](check_in) until [2024-12-15](check_out)
+    - Can you reserve a room starting from [2024-12-25](check_in) to [2024-12-30](check_out)?
+    - I want to stay from [2024-12-01](check_in) to [2024-12-05](check_out)
+
+- intent: response_restauration
+  examples: |
+    - Do you offer breakfast?
+    - Is breakfast included in the stay?
+    - What are the breakfast options?
+    - Can I have breakfast in my room?
+    - Is there a breakfast buffet?
+    - What time does breakfast start?
+    - Do you serve lunch at the hotel?
+    - Are there any lunch options available?
+    - Can I order lunch to my room?
+    - What kind of dinner options do you have?
+    - Is there a dinner reservation required?
+    - Do you offer room service for dinner?
+    - What time does dinner service end?
 

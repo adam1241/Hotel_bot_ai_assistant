@@ -4,3 +4,4 @@ name,email,spa,luggage,cib,bill,loyalty,payment,payment_method,room_booked,time_
 "Michael Johnson","michaeljohnson@gmail.com","True","True","True","300,"False","True","cash","king","03/26/2024-03/29/2024","True"
 "Emily Brown","emilybrown@gmail.com","False","False","False","200","True","False","credit_card","queen","03/27/2024-03/30/2024","False"
 
+

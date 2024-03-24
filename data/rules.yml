@@ -38,6 +38,11 @@ rules:
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
 
+- rule: available rooms
+  steps:
+  - intent: response_to_date
+  - action: action_response_to_date
+
 # - rule: bye_booked
 #   steps:
 #   - intent: goodbye
@@ -48,10 +53,7 @@ rules:
 #   - intent: goodbye
 #   - action: utter_goodbye_not_booked
 
-- rule: Answer queries about the restaurant
-  steps:
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+
 
 - rule: Address user-reported issues
   steps:
@@ -148,15 +150,9 @@ rules:
   - intent: suggestion
   - action: utter_suggestion
 
-- rule: Respond to ask_bill
-  steps:
-    - intent: ask_bill
-    - action: utter_ask_bill
 
-- rule: Respond to inquire_loyalty
-  steps:
-    - intent: inquire_loyalty
-    - action: utter_inquire_loyalty
+
+
 
 - rule: Respond to ask_transportation
   steps:
@@ -198,10 +194,6 @@ rules:
     - intent: ask_parking
     - action: utter_ask_parking
 
-- rule: Respond to ask_payment_options
-  steps:
-    - intent: ask_payment_options
-    - action: utter_ask_payment_options
 
 - rule: Respond to provide_email
   steps:

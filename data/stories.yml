@@ -10,8 +10,8 @@ stories:
   - action: utter_ask_location
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+  - intent: response_restauration
+  - action: utter_response_restauration
   - intent: goodbye
   - action: utter_goodbye_not_booked
 
@@ -80,8 +80,8 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+  - intent: response_restauration
+  - action: utter_response_restauration
   - intent: affirm
   - action: utter_ask_more_help
   - intent: request_room_service
@@ -98,9 +98,9 @@ stories:
   - intent: ask_facilities
   - action: utter_ask_facilities
   - intent: affirm
-  - action: utter_ask_restaurant
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+  - action: utter_response_restauration
+  - intent: response_restauration
+  - action: utter_response_restauration
   - intent: mood_great
   - action: utter_happy
   - intent: goodbye
@@ -131,8 +131,6 @@ stories:
   - action: utter_happy
   - intent: book_room
   - action: utter_book_room
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
@@ -143,9 +141,9 @@ stories:
   - intent: request_room_service
   - action: utter_request_room_service
   - intent: deny
-  - action: utter_ask_restaurant
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+  - action: utter_response_restauration
+  - intent: response_restauration
+  - action: utter_response_restauration
   - intent: goodbye
   - action: utter_goodbye
 

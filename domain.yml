@@ -15,7 +15,6 @@ intents:
   - ask_location
   - ask_checkin_checkout
   - request_room_service
-  - ask_restaurant
   - provide_spa 
   - ask_luggage #new
   - ask_internet #new
@@ -51,10 +50,10 @@ responses:
   utter_iamabot:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
-  provide_name:
+  utter_provide_name:
     - text: "Thank you, Can I confirm your details?"
 
-  provide_email:
+  utter_provide_email:
     - text: "Can I confirm your details?"
 
   utter_ask_facilities:
@@ -63,7 +62,7 @@ responses:
   utter_ask_parking:
   - text: "There is parking place for clients, cars are well guarded !"
 
-  ask_payment_options:
+  utter_ask_payment_options:
   - text: "You can pay cash in the hotel before using the rooms. Or you can pay onlien with credit card or with Paypal."
 
   utter_book_room:
@@ -80,9 +79,6 @@ responses:
 
   utter_request_room_service:
   - text: "We provide a vaste choice of services. if you want to benefit call in the phone provided the 2020 and ask your service. you will get an answer 24/7 !"
-
-  utter_ask_restaurant:
-  - text: " Adam's Delices at our hotel serves an exquisite blend of local and international cuisine, prepared by our renowned chef. Breakfast is available from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 6 PM to 11 PM. Would you prefer to book a table with a specific view or occasion in mind? We also offer private dining options for special moments."
 
   utter_provide_spa:
   - text: "Absolutely! We have a luxurious spa offering a variety of treatments. Would you like to browse our spa menu or learn more about the services we offer?"
@@ -181,8 +177,8 @@ responses:
   utter_reponse_to_date:
   - text: "Here are the available rooms from {in_date} to {out_date}: {rooms}"
 
-  utter_reponse_restauration:
-  - text: "Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
+  utter_response_restauration:
+  - text: "Adam's Delices at our hotel serves an exquisite blend of local and international cuisine. Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
 
 
 session_config:

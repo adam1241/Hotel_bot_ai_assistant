@@ -16,7 +16,7 @@ intents:
   - ask_checkin_checkout
   - request_room_service
   - ask_restaurant
-  - provide_spa #new
+  - provide_spa 
   - ask_luggage #new
   - ask_internet #new
   - ask_activities #new
@@ -28,13 +28,10 @@ intents:
   - ask_weather #new
   - ask_bill #new
   - inquire_loyalty #new
-  - link_account #new
-  - inquire_payment #new
   - ask_transportation #new
   - ask_business_center #new
   - lost_and_found  #new
   - provide_hours #new
-  - request_late_checkout #new
   - request_extra_bed #new
   - compliment  #new
   - suggestion #new
@@ -60,9 +57,14 @@ responses:
   provide_email:
     - text: "Can I confirm your details?"
 
-
   utter_ask_facilities:
   - text: "Our hotel is equipped with facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
+  
+  utter_ask_parking:
+  - text: "There is parking place for clients, cars are well guarded !"
+
+  ask_payment_options:
+  - text: "You can pay cash in the hotel before using the rooms. Or you can pay onlien with credit card or with Paypal."
 
   utter_book_room:
   - text: "I'd be delighted to assist with your reservation. Could you please specify the check-in an check-out dates?"
@@ -81,6 +83,64 @@ responses:
 
   utter_ask_restaurant:
   - text: " Adam's Delices at our hotel serves an exquisite blend of local and international cuisine, prepared by our renowned chef. Breakfast is available from 7 AM to 10:30 AM, lunch from 12 PM to 3 PM, and dinner from 6 PM to 11 PM. Would you prefer to book a table with a specific view or occasion in mind? We also offer private dining options for special moments."
+
+  utter_provide_spa:
+  - text: "Absolutely! We have a luxurious spa offering a variety of treatments. Would you like to browse our spa menu or learn more about the services we offer?"
+
+  utter_ask_luggage:
+  - text:  "Sure, we offer luggage storage for your convenience. Would you like to know the fees and how to store your luggage?"
+
+  utter_ask_internet:
+  - text:  "The Wi-Fi password is anasISaGOODworker. Enjoy your stay!"
+
+  utter_ask_tv_channels:
+  - text:  "we have many channels and movie form around the world !"
+
+  utter_lost_and_found:
+  - text:  "I will let the receptionists about it ! "
+
+  utter_ask_activities:
+  - text:  "There are many exciting activities nearby! There are museums, historical sites, and other ."
+
+  utter_request_crib:
+  - text: "Happy to help! We can definitely provide a crib for your room. "
+
+  utter_ask_gym:
+  - text: "Yes, we have a well-equipped gym on-site. It's open 24/7 for your convenience. Are you interested in the gym's amenities?"
+
+  utter_request_movie:
+  - text:  "We offer a selection of movies for rent. Can I recommend some genres you might enjoy?"
+
+  utter_ask_weather:
+  - text:  "I don't have any information on that sorry !"
+
+  # utter_ask_bill
+
+  #utter_inquire_loyalty:
+
+  utter_ask_transportation:
+  - text: "We do not offer private transportation directly, but there are several taxi services and ride-sharing options nearby. "
+
+  utter_ask_business_center:
+  - text: "Yes, we have a business center with printing, photocopying, and computer workstations available."
+
+  utter_provide_hours:
+  - text: "Our general operating hours are 8 am to 22 pm, however, we accept calls from our client 24/7. "
+
+  utter_request_extra_bed:
+  - text: "Certainly! Adding an extra bed to your room is possible. There may be an additional charge. " 
+
+  utter_ask_pool:
+    - text: "we have a luxury pool, for everyone to enjoy !"
+
+  utter_compliment:
+  - text: "Thank you so much for the kind words! We strive to provide excellent service and are happy you enjoyed your stay."
+
+  utter_suggestion:
+  - text: "Thank you for your suggestion! We appreciate your feedback and will consider it for improvement. "
+  
+  utter_repeat:
+  - text: " Sure, I can repeat that for you. "
 
   utter_report_issue:
   - text: "We strive to provide exceptional service and accommodations, so I'm sorry to hear about your issue. Could you please provide more details about the problem? Whether it's a maintenance issue, a request for additional amenities, or feedback about our services, we're here to help and make it right."

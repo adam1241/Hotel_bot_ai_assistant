@@ -59,38 +59,38 @@ class ActionCheckWeather(Action):
     
 
 def read_csv_file(name,email):
-    filename='Clients.csv'
+    filename="Clients.csv"
     data = []
     with open(filename, 'r') as file:
         csv_reader = csv.DictReader(file)
         for row in csv_reader:
-            Name = row['name']
-            Email = row['email']
+            Name = row["name"]
+            Email = row["email"]
             if name == Name and Email == email :
-                spa = row['spa'] == 'True'
-                luggage = row['luggage'] == 'True'
-                cib = row['cib'] == 'True'
-                bill = float(row['bill'])
-                loyalty = row['loyalty'] == 'True'
-                payment = row['payment'] == 'True'
-                payment_method = row['payment_method']
-                room_booked = row['room_booked']
-                time_room = row['time_room']
-                extra_bed = row['extra_bed'] == 'True'
+                spa = row["spa"] == "True"
+                luggage = row["luggage"] == "True"
+                cib = row["cib"] == "True"
+                bill = float(row["bill"])
+                loyalty = row["loyalty"] == "True"
+                payment = row["payment"] == "True"
+                payment_method = row["payment_method"]
+                room_booked = row["room_booked"]
+                time_room = row["time_room"]
+                extra_bed = row["extra_bed"] == "True"
                 
                 data.append({
-                    'name': Name,
-                    'email': Email,
-                    'spa': spa,
-                    'luggage': luggage,
-                    'cib': cib,
-                    'bill': bill,
-                    'loyalty': loyalty,
-                    'payment': payment,
-                    'payment_method': payment_method,
-                    'room_booked': room_booked,
-                    'time_room': time_room,
-                    'extra_bed': extra_bed
+                    "name": Name,
+                    "email": Email,
+                    "spa": spa,
+                    "luggage": luggage,
+                    "cib": cib,
+                    "bill": bill,
+                    "loyalty": loyalty,
+                    "payment": payment,
+                    "payment_method": payment_method,
+                    "room_booked": room_booked,
+                    "time_room": time_room,
+                    "extra_bed": extra_bed
                 })
                 return data
             
@@ -98,6 +98,6 @@ def read_csv_file(name,email):
 def provide_name(name,email):
     data= read_csv_file(name,email)
     if data == None:
-        return 'you are a new client ,welcome to our hotel ! if you are already a client please ask me to repeat collecting your info'
+        return "you are a new client ,welcome to our hotel ! if you are already a client please ask me to repeat collecting your info"
     else:
-        return 'welcome back sir, how can i help you?'
+        return "welcome back sir, how can i help you?"

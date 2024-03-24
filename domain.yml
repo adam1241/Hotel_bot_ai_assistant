@@ -8,15 +8,40 @@ intents:
   - provide_name
   - provide_email 
   - ask_facilities
+  - ask_parking #new
+  - ask_payment_options #new
   - book_room
   - cancel_reservation
   - ask_location
   - ask_checkin_checkout
   - request_room_service
   - ask_restaurant
+  - provide_spa #new
+  - ask_luggage #new
+  - ask_internet #new
+  - ask_activities #new
+  - request_crib #new
+  - ask_pool #new
+  - ask_gym #new
+  - ask_tv_channels #new
+  - request_movie #new
+  - ask_weather #new
+  - ask_bill #new
+  - inquire_loyalty #new
+  - link_account #new
+  - inquire_payment #new
+  - ask_transportation #new
+  - ask_business_center #new
+  - lost_and_found  #new
+  - provide_hours #new
+  - request_late_checkout #new
+  - request_extra_bed #new
+  - compliment  #new
+  - suggestion #new
   - report_issue
   - affirm
   - deny
+  - repeat #new
   - goodbye
   - nlu_fallback
 
@@ -28,7 +53,7 @@ responses:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
   provide_name:
-    - text: "Can I get your email address?"
+    - text: "Thank you, Can I confirm your details?"
 
   provide_email:
     - text: "Can I confirm your details?"

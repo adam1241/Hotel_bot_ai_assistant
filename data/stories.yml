@@ -118,10 +118,6 @@ stories:
   - action: utter_happy
   - intent: report_issue
   - action: utter_report_issue
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - intent: affirm
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
@@ -150,10 +146,6 @@ stories:
   - action: utter_ask_restaurant
   - intent: ask_restaurant
   - action: utter_ask_restaurant
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - intent: affirm
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 

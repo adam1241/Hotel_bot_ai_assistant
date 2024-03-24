@@ -5,16 +5,43 @@ intents:
   - bot_challenge
   - mood_great
   - mood_unhappy
+  - provide_name
+  - provide_email 
   - ask_facilities
+  - ask_parking #new
+  - ask_payment_options #new
   - book_room
   - cancel_reservation
   - ask_location
   - ask_checkin_checkout
   - request_room_service
   - ask_restaurant
+  - provide_spa #new
+  - ask_luggage #new
+  - ask_internet #new
+  - ask_activities #new
+  - request_crib #new
+  - ask_pool #new
+  - ask_gym #new
+  - ask_tv_channels #new
+  - request_movie #new
+  - ask_weather #new
+  - ask_bill #new
+  - inquire_loyalty #new
+  - link_account #new
+  - inquire_payment #new
+  - ask_transportation #new
+  - ask_business_center #new
+  - lost_and_found  #new
+  - provide_hours #new
+  - request_late_checkout #new
+  - request_extra_bed #new
+  - compliment  #new
+  - suggestion #new
   - report_issue
   - affirm
   - deny
+  - repeat #new
   - goodbye
   - nlu_fallback
   - response_to_date
@@ -22,14 +49,17 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today?"
+  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today? Can ypu provide me with you name?"
 
   utter_iamabot:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  provide_name:
+    - text: "Thank you, Can I confirm your details?"
+
+  provide_email:
+    - text: "Can I confirm your details?"
+
 
   utter_ask_facilities:
   - text: "Our hotel is equipped with facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
@@ -86,7 +116,7 @@ responses:
   - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
 
   utter_please_rephrase:
-  - text:  "I'm sorry, I didn't quite understand that. Could you rephrase?"
+  - text:  "Sorry, I didn't understand. Can you rephrase?"
 
   utter_reponse_to_date:
   - text: "Looking for the available rooms..."
@@ -98,3 +128,6 @@ responses:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions :
+- action_response_to_date

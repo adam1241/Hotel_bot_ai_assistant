@@ -44,6 +44,8 @@ intents:
   - repeat #new
   - goodbye
   - nlu_fallback
+  - response_to_date
+  - response_restauration
 
 responses:
   utter_greet:
@@ -63,7 +65,7 @@ responses:
   - text: "Our hotel is equipped with facilities including a full-service spa, a modern fitness center, an infinity pool with a stunning view, and complimentary high-speed Wi-Fi, we have also a restaurant that offers moroccan specialities such as رغايف ( Rarayaf ). Are you looking for something specific, such as a business center or child care services?"
 
   utter_book_room:
-  - text: "I'd be delighted to assist with your reservation. Could you please specify the room type you're interested in (e.g., standard, deluxe, suite), the check-in and check-out dates, and any special preferences you might have? For instance, would you prefer a room on a higher floor, or perhaps one with a sea view?"
+  - text: "I'd be delighted to assist with your reservation. Could you please specify the check-in an check-out dates?"
 
   utter_cancel_reservation:
   - text: "I understand plans can change. To proceed with your cancellation, I'll need your booking reference number and the name under which the reservation was made. Would you also like information on our cancellation policy or assistance with rebooking at a later date?"
@@ -116,6 +118,16 @@ responses:
   utter_please_rephrase:
   - text:  "Sorry, I didn't understand. Can you rephrase?"
 
+  utter_reponse_to_date:
+  - text: "Here are the available rooms from {in_date} to {out_date}: {rooms}"
+
+  utter_reponse_restauration:
+  - text: "Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "
+
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+actions :
+- action_response_to_date

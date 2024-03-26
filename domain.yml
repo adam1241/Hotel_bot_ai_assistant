@@ -1,5 +1,36 @@
 version: "3.1"
 
+
+
+entities:
+  - name
+  - email
+  - date
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  email:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: email
+  date:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: date
+
+
+
+actions:
+  - check_name_email
+  - action_response_to_date
+  - action_add_to_clients
+
 intents:
   - greet
   - bot_challenge
@@ -45,13 +76,13 @@ intents:
 
 responses:
   utter_greet:
-  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today? Can ypu provide me with you name?"
+  - text: "Welcome to Mohcine's Palace , a place where luxury meets comfort! How can I enhance your stay today? Can you provide me with your name?"
 
   utter_iamabot:
   - text: "I'm your virtual concierge, here to ensure your inquiries and needs are addressed 24/7."
 
   utter_provide_name:
-    - text: "Thank you, Can I confirm your details?"
+    - text: "Thank you, Could you enter your email?"
 
   utter_provide_email:
     - text: "Can I confirm your details?"
@@ -185,5 +216,3 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 
-actions :
-- action_response_to_date

@@ -39,51 +39,44 @@ from datetime import datetime
 import requests
 import csv
 
-def read_csv_file(name,email):
-    filename="Clients.csv"
-    data = []
-    with open(filename, 'r') as file:
-        csv_reader = csv.DictReader(file)
-        for row in csv_reader:
-            Name = row["name"]
-            Email = row["email"]
-            if name == Name and Email == email :
-                spa = row["spa"] == "True"
-                luggage = row["luggage"] == "True"
-                cib = row["cib"] == "True"
-                bill = float(row["bill"])
-                loyalty = row["loyalty"] == "True"
-                payment = row["payment"] == "True"
-                payment_method = row["payment_method"]
-                room_booked = row["room_booked"]
-                time_room = row["time_room"]
-                extra_bed = row["extra_bed"] == "True"
-                
-                data.append({
-                    "name": Name,
-                    "email": Email,
-                    "spa": spa,
-                    "luggage": luggage,
-                    "cib": cib,
-                    "bill": bill,
-                    "loyalty": loyalty,
-                    "payment": payment,
-                    "payment_method": payment_method,
-                    "room_booked": room_booked,
-                    "time_room": time_room,
-                    "extra_bed": extra_bed
-                })
-                return data
-            
-    return None
-def provide_name(name,email):
-    data= read_csv_file(name,email)
-    if data == None:
-        return "you are a new client ,welcome to our hotel ! if you are already a client please ask me to repeat collecting your info"
-    else:
+class CheckName(Action):
+    def name(self) -> Text:
+        return "check_name_email"
 
-        return "welcome back sir, how can i help you?"
-    
+    def read_csv_file(self, name: Text, email: Text) -> List[Dict[Text, Any]]:
+        filename = "Clients.csv"
+        data = []
+        with open(filename, 'r') as file:
+            csv_reader = csv.DictReader(file)
+            for row in csv_reader:
+                if row["name"] == name and row["email"] == email:
+                    data.append({
+                        "name": row["name"],
+                        "email": row["email"],
+                        "spa": row["spa"] == "True",
+                        "luggage": row["luggage"] == "True",
+                        "cib": row["cib"] == "True",
+                        "bill": float(row["bill"]),
+                        "loyalty": row["loyalty"] == "True",
+                        "payment": row["payment"] == "True",
+                        "payment_method": row["payment_method"],
+                        "room_booked": row["room_booked"],
+                        "time_room": row["time_room"],
+                        "extra_bed": row["extra_bed"] == "True"
+                    })
+        return data
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot("name")
+        email = tracker.get_slot("email")
+        data = self.read_csv_file(name, email)
+        if not data:
+            dispatcher.utter_message("You are a new client, welcome to our hotel! If you are already a client, please ask me to repeat collecting your info.")
+        else:
+            dispatcher.utter_message("Welcome back sir, how can I help you?")
+        return []
+
+        
 class ActionResponseToDate(Action):
 
     def name(self)-> Text:
@@ -146,4 +139,29 @@ class ActionResponseToDate(Action):
             message = "Too many dates provided"
 
         dispatcher.utter_message(message)
+        return []
+
+
+
+
+
+
+class AddToClients(Action):
+    def name(self) -> Text:
+        return "action_add_to_clients"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        name = tracker.get_slot("name")
+        email = tracker.get_slot("email")
+        room_booked = tracker.get_slot("room_booked")
+        time_room = tracker.get_slot("time_room")
+        extra_bed = tracker.get_slot("extra_bed")
+
+        # Append the new booking to the Clients.csv file
+        with open("Clients.csv", "a", newline="") as file:
+            writer = csv.writer(file)
+            writer.writerow([name, email, "False", "False", "False", "150", "False", "True", "credit card", room_booked, time_room, "false"])
+
+        dispatcher.utter_message("Your booking has been successfully added to our records.")
+
         return []

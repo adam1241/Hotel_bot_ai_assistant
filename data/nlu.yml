@@ -297,6 +297,33 @@ nlu:
     - sayonara
     - see ya
 
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - i m [adam](name)
+    - Hi, I'm [Sarah](name)
+    - This is [Alex](name)
+    - Call me [Emily](name)
+    - You can refer to me as [Michael](name)
+    - Hello, my name's [Sophie](name)
+    - Just to let you know, I go by [David](name)
+    - They call me [Lily](name)
+    - [Jack](name) is the name, nice to meet you
+    - [yanis](name)
+
+- intent: provide_email
+  examples: |
+    - My email is [john@example.com](email)
+    - Here's my email: [adam@gmail.com](email)
+    - You can reach me at [sarah@example.com](email)
+    - Email me at [alex@example.com](email)
+    - [emily@example.com](email)
+    - my mail is [michael@example.com](email)
+    - i think it is [sophie@example.com](email)
+    - My email address is [david@example.com](email)
+    - You can email me as [lily@example.com](email)
+    - Contact me at [jack@example.com](email)
+
 
 - intent: suggestion
   examples: |

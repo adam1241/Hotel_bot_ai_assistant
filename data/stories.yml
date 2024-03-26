@@ -6,6 +6,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: ask_location
   - action: utter_ask_location
   - intent: ask_checkin_checkout
@@ -19,6 +26,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: report_issue
   - action: utter_report_issue
   - intent: deny
@@ -33,6 +47,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: request_room_service
   - action: utter_request_room_service
   - action: utter_ask_more_help
@@ -43,6 +64,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: book_room
   - action: utter_book_room
   - intent: deny
@@ -63,6 +91,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: ask_location
   - action: utter_ask_location
   - intent: ask_facilities
@@ -80,6 +115,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: response_restauration
   - action: utter_response_restauration
   - intent: affirm
@@ -95,6 +137,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: ask_facilities
   - action: utter_ask_facilities
   - intent: affirm
@@ -110,6 +159,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: ask_facilities
   - action: utter_ask_facilities
   - intent: deny
@@ -125,6 +181,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - action: check_name_email
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
   - intent: affirm
@@ -138,6 +198,10 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - action: check_name_email
   - intent: request_room_service
   - action: utter_request_room_service
   - intent: deny
@@ -151,6 +215,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: book_room
   - action: utter_book_room
   - intent: cancel_reservation
@@ -168,6 +239,13 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: ask_facilities
   - action: utter_ask_facilities
   - intent: affirm

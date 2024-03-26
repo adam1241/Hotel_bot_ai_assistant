@@ -249,15 +249,6 @@ nlu:
     - Is room service available 24/7?
     - I'd like to order breakfast to my room.
 
-- intent: ask_restaurant
-  examples: |
-    - Is there a restaurant in the hotel?
-    - Can I book a table at the restaurant?
-    - What type of cuisine does the restaurant serve?
-    - What are the opening hours of the restaurant?
-    - i am hungry
-    - i want to eat
-
 - intent: report_issue
   examples: |
     - There's an issue with my room.
@@ -305,6 +296,212 @@ nlu:
     - asta la vista
     - sayonara
     - see ya
+
+- intent: provide_name
+  examples: |
+    - My name is [John](name)
+    - i m [adam](name)
+    - Hi, I'm [Sarah](name)
+    - This is [Alex](name)
+    - Call me [Emily](name)
+    - You can refer to me as [Michael](name)
+    - Hello, my name's [Sophie](name)
+    - Just to let you know, I go by [David](name)
+    - They call me [Lily](name)
+    - [Jack](name) is the name, nice to meet you
+    - [yanis](name)
+
+- intent: provide_email
+  examples: |
+    - My email is [john@example.com](email)
+    - Here's my email: [adam@gmail.com](email)
+    - You can reach me at [sarah@example.com](email)
+    - Email me at [alex@example.com](email)
+    - [emily@example.com](email)
+    - my mail is [michael@example.com](email)
+    - i think it is [sophie@example.com](email)
+    - My email address is [david@example.com](email)
+    - You can email me as [lily@example.com](email)
+    - Contact me at [jack@example.com](email)
+
+
+- intent: suggestion
+  examples: |
+    - you could add a recommendation feature for restaurants
+    - it would be nice if there was a poolside bar
+    - maybe you could offer later check-out times
+    - is there a way to get a wake-up call through the app?
+    - I think it would be helpful to have more information about the gym facilities
+    - I have a suggestion for improvement.
+    - Can I offer a suggestion to enhance the guest experience?
+    - Here's an idea to make things better.
+
+- intent: ask_spa
+  examples: |
+    - do you have a spa?
+    - is there a spa on-site?
+    - can I get a massage here?
+    - what spa services do you offer?
+    - tell me more about the spa
+
+- intent: ask_luggage
+  examples: |
+    - can I store my luggage here?
+    - do you offer luggage storage?
+    - what are the fees for luggage storage?
+    - how can I store my luggage after check-out?
+    - where can I leave my bags before check-in?
+
+- intent: ask_internet
+  examples: |
+    - what's the Wi-Fi password?
+    - can I get internet access in my room?
+    - how strong is the Wi-Fi signal?
+    - is there a wired internet connection available?
+    - I'm having trouble connecting to the Wi-Fi
+
+- intent: ask_activities
+  examples: |
+    - what are some things to do nearby?
+    - are there any attractions close to the hotel?
+    - can you recommend some restaurants in the area?
+    - what activities are there for kids?
+    - I'm looking for something fun to do tonight
+
+- intent: request_crib
+  examples: |
+    - can I request a crib for my room?
+    - do you provide cribs for babies?
+    - I'll need a crib for my infant during my stay
+    - is there a fee for using a crib?
+    - can you add a crib to my reservation?
+
+- intent: ask_pool
+  examples: |
+    - do you have a pool?
+    - is there a swimming pool on-site?
+    - what are the pool hours?
+    - where is the pool located?
+    - can you tell me more about the pool facilities?
+
+- intent: ask_gym
+  examples: |
+    - do you have a gym?
+    - is there a fitness center available?
+    - what equipment does the gym have?
+    - what are the gym hours?
+    - can I use the gym before check-in?
+
+- intent: ask_tv_channels
+  examples: |
+    - what channels do you offer on TV?
+    - can I watch [specific channel] in my room?
+    - do you have access to streaming services?
+    - what movies are available on TV?
+    - can I connect my laptop to the TV?
+
+- intent: request_movie
+  examples: |
+    - do you offer movies to rent?
+    - can I watch a movie in my room?
+    - what movies are available for rent?
+    - how much does it cost to rent a movie?
+    - how can I order a movie to my room?
+
+- intent: ask_weather
+  examples: |
+    - what's the weather like today?
+    - will it rain tomorrow?
+    - what's the forecast for the weekend?
+    - is it going to be hot tomorrow?
+    - I need to know if I should pack an umbrella
+
+- intent: book_room
+  examples: |
+    - I'd like to book a room
+    - can I make a reservation?
+    - do you have any rooms available?
+    - I'm looking to book a hotel room
+    - what's the rate for a room
+
+- intent: ask_bill
+  examples: |
+    - How much is my bill?
+    - Can you tell me the total amount I owe?
+    - What's the cost for my stay?
+
+- intent: inquire_loyalty
+  examples: |
+    - Do you have a loyalty program?
+    - How does your loyalty program work?
+    - Can you provide information about your rewards program?
+
+- intent: ask_transportation
+  examples: |
+    - Do you offer transportation services?
+    - How can I arrange transportation from the airport?
+    - Is there a shuttle service available?
+
+- intent: ask_business_center
+  examples: |
+    - Is there a business center in the hotel?
+    - Can I access the business facilities?
+    - Do you provide services like printing and copying?
+
+- intent: lost_and_found
+  examples: |
+    - I lost something in my room. Can you help me find it?
+    - Is there a lost and found department?
+    - I misplaced an item. What should I do?
+
+- intent: provide_hours
+  examples: |
+    - What are your operating hours?
+    - Can you tell me when you're open?
+    - What time does your facility close?
+
+- intent: request_extra_bed
+  examples: |
+    - Can I get an extra bed in my room?
+    - Is it possible to have another bed brought to my room?
+    - I need an additional bed. Is that an option?
+
+- intent: compliment
+  examples: |
+    - I wanted to compliment your excellent service.
+    - Your staff has been incredibly helpful. Kudos to them!
+    - I'm very pleased with my experience here. Great job!
+
+- intent: ask_parking
+  examples: |
+    - Is parking available at the hotel?
+    - Where can I park my car?
+    - Do you have on-site parking facilities?
+
+- intent: ask_payment_options
+  examples: |
+    - What are the payment options available?
+    - Can I pay with a credit card?
+    - Do you accept cash or only card payments?
+
+- intent: provide_email
+  examples: |
+    - My email address is example@email.com.
+    - Here's my email: user123@gmail.com.
+    - You can reach me at john.doe@example.com.
+
+- intent: provide_spa
+  examples: |
+    - Yes, I'd like to book a spa session.
+    - Can you provide more information about your spa services?
+    - I'm interested in scheduling a massage at the spa.
+
+- intent: repeat
+  examples: |
+    - Can you repeat that, please?
+    - I didn't catch that. Can you say it again?
+    - Sorry, could you repeat what you just said?
+
 
 - intent: response_to_date
   examples : |

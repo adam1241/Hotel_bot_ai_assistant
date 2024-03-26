@@ -1,6 +1,7 @@
 name,email,spa,luggage,cib,bill,loyalty,payment,payment_method,room_booked,time_room,extra_bed
-HARALAMBOUS Yannis,Yannis.H@gmail.com,True,False,True,250,True,True,cash, Standard,"03/24/2024-03/27/2024",True
-BELLA Gabor,Gabor.B@gmail.com,False,True,False,150,False,True,credit_card,Standard,"03/25/2024-03/28/2024",False
-Michael Johnson,michaeljohnson@gmail.com,True,True,True,300,False,True,cash,Suite,"03/26/2024-03/29/2024",True
-Emily Brown,emilybrown@gmail.com,False,False,False,200,True,False,credit_card,Suite,"03/27/2024-03/30/2024",False
+"HARALAMBOUS Yannis","yannis.haralambous@imt-atlantique.fr","True","False","True","250","True","True","cash","single","03/24/2024-03/27/2024","True"
+"BELLA Gabor","gabor.bella@imt-atlantique.fr","False","True","False","150","False","True","credit_card","double","03/25/2024-03/28/2024","False"
+"Michael Johnson","michaeljohnson@gmail.com","True","True","True","300,"False","True","cash","king","03/26/2024-03/29/2024","True"
+"Emily Brown","emilybrown@gmail.com","False","False","False","200","True","False","credit_card","queen","03/27/2024-03/30/2024","False"
+
 

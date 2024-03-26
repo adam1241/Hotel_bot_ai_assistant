@@ -115,7 +115,7 @@ class ActionResponseToDate(Action):
     
     def extract_rooms(self,in_date,out_date) :
         available_rooms = []
-        with open('../rooms.csv', 'r') as file:
+        with open('rooms.csv', 'r') as file:
             csv_reader = csv.reader(file)
             for line in csv_reader:
                 dates = line[1].split(',')
@@ -145,4 +145,4 @@ class ActionResponseToDate(Action):
             message = "Too many dates provided"
 
         dispatcher.utter_message(message)
-        return []
+        return [SlotSet("matches", message)]

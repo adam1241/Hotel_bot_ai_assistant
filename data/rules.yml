@@ -17,16 +17,10 @@ rules:
   - intent: ask_facilities
   - action: utter_ask_facilities
 
-- rule:  booking process
-  steps:
-  - intent: book_room
-  - action: utter_book_room
-
 - rule: reservation cancellation
   steps:
   - intent: cancel_reservation
   - action: utter_cancel_reservation
-  # - action: utter_ask_more_help
 
 - rule:  hotel location 
   steps:
@@ -44,17 +38,10 @@ rules:
   - action: action_response_to_date
   - action: action_booking_decision
 
-# - rule: bye_booked
-#   steps:
-#   - intent: goodbye
-#   - action: utter_goodbye_booked
-
-# - rule: bye_not_booked
-#   steps:
-#   - intent: goodbye
-#   - action: utter_goodbye_not_booked
-
-
+- rule: bye_booked
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
 
 - rule: Address user-reported issues
   steps:
@@ -106,20 +93,10 @@ rules:
   - intent: ask_gym
   - action: utter_ask_gym
 
-- rule: Inform about TV channels
-  steps:
-  - intent: ask_tv_channels
-  - action: utter_ask_tv_channels
-
 - rule: Offer movie rentals
   steps:
   - intent: request_movie
   - action: utter_request_movie
-
-- rule: Get weather information
-  steps:
-  - intent: ask_weather
-  - action: utter_ask_weather
 
 - rule: Help with airport transportation
   steps:
@@ -151,20 +128,6 @@ rules:
   - intent: suggestion
   - action: utter_suggestion
 
-
-
-
-
-- rule: Respond to ask_transportation
-  steps:
-    - intent: ask_transportation
-    - action: utter_ask_transportation
-
-- rule: Respond to ask_business_center
-  steps:
-    - intent: ask_business_center
-    - action: utter_ask_business_center
-
 - rule: Respond to lost_and_found
   steps:
     - intent: lost_and_found
@@ -175,28 +138,6 @@ rules:
     - intent: provide_hours
     - action: utter_provide_hours
 
-- rule: Respond to request_extra_bed
-  steps:
-    - intent: request_extra_bed
-    - action: utter_request_extra_bed
-
-- rule: Respond to compliment
-  steps:
-    - intent: compliment
-    - action: utter_compliment
-
-- rule: Respond to suggestion
-  steps:
-    - intent: suggestion
-    - action: utter_suggestion
-
-- rule: Respond to ask_parking
-  steps:
-    - intent: ask_parking
-    - action: utter_ask_parking
-
-
-
 - rule: Respond to provide_spa
   steps:
     - intent: provide_spa
@@ -206,8 +147,6 @@ rules:
   steps:
     - intent: repeat
     - action: utter_repeat
-
-
 
 - rule: Activate check_name_email after providing name 
   steps: 

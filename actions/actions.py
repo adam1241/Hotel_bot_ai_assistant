@@ -139,7 +139,7 @@ class ActionResponseToDate(Action):
             message = "Too many dates provided"
 
         dispatcher.utter_message(message)
-        return [SlotSet("matches", message)]
+        return []
 
 
 

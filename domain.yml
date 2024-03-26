@@ -30,18 +30,16 @@ actions:
   - check_name_email
   - action_response_to_date
   - action_add_to_clients
+  - action_booking_decision
 
 intents:
   - greet
   - bot_challenge
-  - mood_great
-  - mood_unhappy
   - provide_name
   - provide_email 
   - ask_facilities
   - ask_parking #new
   - ask_payment_options #new
-  - book_room
   - cancel_reservation
   - ask_location
   - ask_checkin_checkout
@@ -53,11 +51,8 @@ intents:
   - request_crib #new
   - ask_pool #new
   - ask_gym #new
-  - ask_tv_channels #new
   - request_movie #new
-  - ask_weather #new
   - ask_bill #new
-  - inquire_loyalty #new
   - ask_transportation #new
   - ask_business_center #new
   - lost_and_found  #new
@@ -96,54 +91,41 @@ responses:
   utter_ask_payment_options:
   - text: "You can pay cash in the hotel before using the rooms. Or you can pay onlien with credit card or with Paypal."
 
-  utter_book_room:
-  - text: "I'd be delighted to assist with your reservation. Could you please specify the check-in an check-out dates?"
-
   utter_cancel_reservation:
-  - text: "I understand plans can change. To proceed with your cancellation, I'll need your booking reference number and the name under which the reservation was made. Would you also like information on our cancellation policy or assistance with rebooking at a later date?"
+  - text: "I understand. To proceed with your cancellation, please contact the Hotel reception "
 
   utter_ask_location:
-  - text: "Our hotel boasts a prime location in the heart of downtown, offering easy access to the city's finest dining, shopping, and cultural landmarks. If you're arriving by public transportation or driving, I can provide detailed directions. Just let me know your starting point!"
+  - text: "Our hotel boasts a prime location in the heart of downtown, offering easy access to the city's finest dining, shopping, and cultural landmarks."
 
   utter_ask_checkin_checkout:
-  - text: "Standard check-in time is from 3 PM, and check-out is by 11 AM on your departure day. Should you require an early check-in or a late check-out, please let us know in advance. We're happy to accommodate your requests based on availability and may adjust for any additional charges."
+  - text: "Standard check-in time is from 3 PM, and check-out is by 11 AM on your departure day."
 
   utter_request_room_service:
   - text: "We provide a vaste choice of services. if you want to benefit call in the phone provided the 2020 and ask your service. you will get an answer 24/7 !"
 
   utter_provide_spa:
-  - text: "Absolutely! We have a luxurious spa offering a variety of treatments. Would you like to browse our spa menu or learn more about the services we offer?"
+  - text: "Absolutely! We have a luxurious spa offering a variety of treatments."
 
   utter_ask_luggage:
-  - text:  "Sure, we offer luggage storage for your convenience. Would you like to know the fees and how to store your luggage?"
+  - text:  "Sure, we offer luggage storage for your convenience."
 
   utter_ask_internet:
-  - text:  "The Wi-Fi password is anasISaGOODworker. Enjoy your stay!"
-
-  utter_ask_tv_channels:
-  - text:  "we have many channels and movie form around the world !"
+  - text:  "The Wi-Fi password is anasISaGOODworker."
 
   utter_lost_and_found:
-  - text:  "I will let the receptionists about it ! "
+  - text:  "I will let the receptionists know about it !"
 
   utter_ask_activities:
-  - text:  "There are many exciting activities nearby! There are museums, historical sites, and other ."
+  - text:  "There are many exciting activities nearby! There are museums, historical sites, and others ."
 
   utter_request_crib:
   - text: "Happy to help! We can definitely provide a crib for your room. "
 
   utter_ask_gym:
-  - text: "Yes, we have a well-equipped gym on-site. It's open 24/7 for your convenience. Are you interested in the gym's amenities?"
+  - text: "Yes, we have a well-equipped gym on-site. It's open 24/7 for your convenience."
 
   utter_request_movie:
-  - text:  "We offer a selection of movies for rent. Can I recommend some genres you might enjoy?"
-
-  utter_ask_weather:
-  - text:  "I don't have any information on that sorry !"
-
-  # utter_ask_bill
-
-  #utter_inquire_loyalty:
+  - text:  "We offer a selection of movies for rent."
 
   utter_ask_transportation:
   - text: "We do not offer private transportation directly, but there are several taxi services and ride-sharing options nearby. "
@@ -152,7 +134,7 @@ responses:
   - text: "Yes, we have a business center with printing, photocopying, and computer workstations available."
 
   utter_provide_hours:
-  - text: "Our general operating hours are 8 am to 22 pm, however, we accept calls from our client 24/7. "
+  - text: "Our general operating hours are 8 am to 22 pm. However, we accept calls from our clients 24/7. "
 
   utter_request_extra_bed:
   - text: "Certainly! Adding an extra bed to your room is possible. There may be an additional charge. " 
@@ -170,43 +152,19 @@ responses:
   - text: " Sure, I can repeat that for you. "
 
   utter_report_issue:
-  - text: "We strive to provide exceptional service and accommodations, so I'm sorry to hear about your issue. Could you please provide more details about the problem? Whether it's a maintenance issue, a request for additional amenities, or feedback about our services, we're here to help and make it right."
+  - text: "We strive to provide exceptional service and accommodations, so I'm sorry to hear about your issue. Please contact the hotel staff about the problem."
   
-  utter_info_provided:
-  - text: " I'll execute your request !"
-
-  utter_mood_unhappy:
-  - text: " I'm sorry to hear that !"
-
-  utter_mood_great:
-  - text: " I am happy to hear that!"
-
-  utter_info_provided_sad:
-  - text: "how sad !"
-
-  utter_did_that_help:
-  - text: "did that help??"
-
-  utter_happy:
-  - text: "I am glad !"
-
   utter_ask_more_help:
   - text: "do you have any other questions ? I'd love to help =D"
 
   utter_goodbye:
   - text: "bye! ;)"
 
-  utter_goodbye_booked:
-  - text: "We are glad that you have shown interest in our hotel! You will surely enjoy your time with us! ;)"
-
-  utter_goodbye_not_booked:
-  - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
-
   utter_please_rephrase:
   - text:  "Sorry, I may not be able to unswer your question :.( "
 
   utter_reponse_to_date:
-  - text: "Here are the available rooms from {in_date} to {out_date}: {rooms}"
+  - text: "Here are the available rooms from {in_date} to {out_date}: \n {rooms}"
 
   utter_response_restauration:
   - text: "Adam's Delices at our hotel serves an exquisite blend of local and international cuisine. Restauration services are not covered by the reservation price; however, guests can enjoy a variety of dining options available within the hotel premises at an additional cost (Breakfast : 10$ , Lunch: 20$, Diner: 20$) "

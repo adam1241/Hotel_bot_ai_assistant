@@ -5,3 +5,5 @@ name,email,spa,luggage,cib,bill,loyalty,payment,payment_method,room_booked,time_
 "Emily Brown","emilybrown@gmail.com","False","False","False","200","True","False","credit_card","queen","03/27/2024-03/30/2024","False"
 
 
+,mehdi@gmail.com,False,False,False,,False,True,credit card,false,,false
+,mehdi@po.com,False,False,False,,False,True,credit card,false,,false

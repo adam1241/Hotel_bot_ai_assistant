@@ -378,6 +378,7 @@ nlu:
 
 - intent: ask_pool
   examples: |
+    - i sthere a pool
     - do you have a pool?
     - is there a swimming pool on-site?
     - what are the pool hours?
@@ -517,6 +518,8 @@ nlu:
 
 - intent: response_restauration
   examples: |
+    - restaurant
+    - i want to eat 
     - Do you offer breakfast?
     - Is breakfast included in the stay?
     - What are the breakfast options?

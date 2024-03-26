@@ -65,12 +65,22 @@ class CheckName(Action):
                         "extra_bed": row["extra_bed"] == "True"
                     })
         return data
+    def addClient(self, name,email, room_booked, time_room,extra_bed) :
+        # Append the new booking to the Clients.csv file
+        with open("Clients.csv", "a", newline="") as file:
+            writer = csv.writer(file)
+            print("i am adding a row")
+            writer.writerow([name, email, "False", "False", "False", "", "False", "True", "credit card", "false", time_room, "false"])
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         name = tracker.get_slot("name")
         email = tracker.get_slot("email")
         data = self.read_csv_file(name, email)
+        room_booked=tracker.get_slot("date")
+        time_room=tracker.get_slot("time_room")
+        extra_bed=tracker.get_slot("extra_bed")
         if not data:
+            self.addClient(name,email, room_booked, time_room,extra_bed) 
             dispatcher.utter_message("You are a new client, welcome to our hotel! If you are already a client, please ask me to repeat collecting your info.")
         else:
             dispatcher.utter_message("Welcome back sir, how can I help you?")
@@ -109,7 +119,7 @@ class ActionResponseToDate(Action):
     
     def extract_rooms(self,in_date,out_date) :
         available_rooms = []
-        with open('../rooms.csv', 'r') as file:
+        with open('rooms.csv', 'r') as file:
             csv_reader = csv.reader(file)
             for line in csv_reader:
                 dates = line[1].split(',')
@@ -139,7 +149,7 @@ class ActionResponseToDate(Action):
             message = "Too many dates provided"
 
         dispatcher.utter_message(message)
-        return []
+        return [SlotSet("matches", message)]
 
 
 

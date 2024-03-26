@@ -53,10 +53,7 @@ rules:
 #   - intent: goodbye
 #   - action: utter_goodbye_not_booked
 
-- rule: Answer queries about the restaurant
-  steps:
-  - intent: ask_restaurant
-  - action: utter_ask_restaurant
+
 
 - rule: Address user-reported issues
   steps:
@@ -67,3 +64,160 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_please_rephrase
+
+- rule: Answer parking inquiries
+  steps:
+  - intent: ask_parking
+  - action: utter_ask_parking
+
+- rule: Answer payment options inquiries
+  steps:
+  - intent: ask_payment_options
+  - action: utter_ask_payment_options
+
+- rule: Answer luggage storage inquiries
+  steps:
+  - intent: ask_luggage
+  - action: utter_ask_luggage
+
+- rule: Provide Wi-Fi password
+  steps:
+  - intent: ask_internet
+  - action: utter_ask_internet
+
+- rule: Suggest activities
+  steps:
+  - intent: ask_activities
+  - action: utter_ask_activities
+
+- rule: Request crib for upcoming stay
+  steps:
+  - intent: request_crib
+  - action: utter_request_crib
+
+- rule: Answer pool inquiries
+  steps:
+  - intent: ask_pool
+  - action: utter_ask_pool
+
+- rule: Answer gym inquiries
+  steps:
+  - intent: ask_gym
+  - action: utter_ask_gym
+
+- rule: Inform about TV channels
+  steps:
+  - intent: ask_tv_channels
+  - action: utter_ask_tv_channels
+
+- rule: Offer movie rentals
+  steps:
+  - intent: request_movie
+  - action: utter_request_movie
+
+- rule: Get weather information
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_weather
+
+- rule: Help with airport transportation
+  steps:
+  - intent: ask_transportation
+  - action: utter_ask_transportation
+
+- rule: Describe business center
+  steps:
+  - intent: ask_business_center
+  - action: utter_ask_business_center
+
+- rule: Provide hotel operation hours
+  steps:
+  - intent: provide_hours
+  - action: utter_provide_hours
+
+- rule: Request extra bed for upcoming stay
+  steps:
+  - intent: request_extra_bed
+  - action: utter_request_extra_bed
+
+- rule: Thank guest for compliment
+  steps:
+  - intent: compliment
+  - action: utter_compliment
+
+- rule: Appreciate guest suggestion
+  steps:
+  - intent: suggestion
+  - action: utter_suggestion
+
+
+
+
+
+- rule: Respond to ask_transportation
+  steps:
+    - intent: ask_transportation
+    - action: utter_ask_transportation
+
+- rule: Respond to ask_business_center
+  steps:
+    - intent: ask_business_center
+    - action: utter_ask_business_center
+
+- rule: Respond to lost_and_found
+  steps:
+    - intent: lost_and_found
+    - action: utter_lost_and_found
+
+- rule: Respond to provide_hours
+  steps:
+    - intent: provide_hours
+    - action: utter_provide_hours
+
+- rule: Respond to request_extra_bed
+  steps:
+    - intent: request_extra_bed
+    - action: utter_request_extra_bed
+
+- rule: Respond to compliment
+  steps:
+    - intent: compliment
+    - action: utter_compliment
+
+- rule: Respond to suggestion
+  steps:
+    - intent: suggestion
+    - action: utter_suggestion
+
+- rule: Respond to ask_parking
+  steps:
+    - intent: ask_parking
+    - action: utter_ask_parking
+
+
+
+- rule: Respond to provide_spa
+  steps:
+    - intent: provide_spa
+    - action: utter_provide_spa
+
+- rule: Respond to repeat
+  steps:
+    - intent: repeat
+    - action: utter_repeat
+
+
+
+- rule: Activate check_name_email after providing name 
+  steps: 
+    - intent: provide_name
+    - action: utter_provide_name
+- rule: Activate check_name_email after providing  email
+  steps:
+    - intent: provide_email
+    - action: check_name_email
+
+
+
+
+

@@ -203,7 +203,7 @@ responses:
   - text: "We are glad that you showed interest in our hotel! We are saddened that you won't benefit from our services :( We hope to see you soon! :D"
 
   utter_please_rephrase:
-  - text:  "Sorry, I didn't understand. Can you rephrase?"
+  - text:  "Sorry, I may not be able to unswer your question :.( "
 
   utter_reponse_to_date:
   - text: "Here are the available rooms from {in_date} to {out_date}: {rooms}"

@@ -64,7 +64,8 @@ class CheckName(Action):
                         "time_room": row["time_room"],
                         "extra_bed": row["extra_bed"] == "True"
                     })
-        return data
+                    return data
+        return None
     def addClient(self, name,email, room_booked, time_room,extra_bed) :
         # Append the new booking to the Clients.csv file
         with open("Clients.csv", "a", newline="") as file:
@@ -79,7 +80,7 @@ class CheckName(Action):
         room_booked=tracker.get_slot("date")
         time_room=tracker.get_slot("time_room")
         extra_bed=tracker.get_slot("extra_bed")
-        if not data:
+        if data==None:
             self.addClient(name,email, room_booked, time_room,extra_bed) 
             dispatcher.utter_message("You are a new client, welcome to our hotel! If you are already a client, please ask me to repeat collecting your info.")
         else:

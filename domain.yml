@@ -3,9 +3,15 @@ version: "3.1"
 
 
 entities:
-  - name
-  - email
-  - date
+  - name:
+      use_entities: true
+      regex: "[A-Za-z' -]+"
+  - email:
+      use_entities: true
+      regex: "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}"
+  - date:
+      use_entities: true
+      regex: '^\d{4}-\d{2}-\d{2}$'
 
 slots:
   name:

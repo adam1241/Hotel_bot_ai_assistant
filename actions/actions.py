@@ -160,7 +160,7 @@ class AddToClients(Action):
         # Append the new booking to the Clients.csv file
         with open("Clients.csv", "a", newline="") as file:
             writer = csv.writer(file)
-            writer.writerow([name, email, "False", "False", "False", "150", "False", "True", "credit card", room_booked, time_room, "false"])
+            writer.writerow([name, email, "False", "False", "False", "", "False", "True", "credit card", room_booked, time_room, "false"])
 
         dispatcher.utter_message("Your booking has been successfully added to our records.")
 

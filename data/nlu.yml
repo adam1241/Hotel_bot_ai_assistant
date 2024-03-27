@@ -446,4 +446,10 @@ nlu:
     - Is there a dinner reservation required?
     - Do you offer room service for dinner?
     - What time does dinner service end?
+  
+- intent: number 
+  examples: |
+    - /^\d+$/
+    - /^number: \d+$/
+    - /^num (\d+)$/
 

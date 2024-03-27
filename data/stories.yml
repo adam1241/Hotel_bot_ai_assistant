@@ -217,7 +217,33 @@ stories:
 
 - story: booking
   steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: response_to_date
   - action: action_response_to_date
-  - intent: wait_for_dates
+  - intent: number
   - action: action_booking_decision
+
+
+- story: booking 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
+  - intent: response_to_date
+  - action: action_response_to_date
+  - intent: number
+  - action : action_booking_decision

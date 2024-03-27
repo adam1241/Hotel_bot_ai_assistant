@@ -81,6 +81,8 @@ intents:
   - response_to_date
   - response_restauration
   - wait_for_dates
+  - number
+
 
 responses:
   utter_greet:

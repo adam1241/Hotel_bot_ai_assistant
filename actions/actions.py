@@ -49,7 +49,7 @@ class CheckName(Action):
         with open(filename, 'r') as file:
             csv_reader = csv.DictReader(file)
             for row in csv_reader:
-                if row["name"] == name and row["email"] == email:
+                if name.lower() in row["name"].lower() and email in row["email"]:
                     data.append({
                         "name": row["name"],
                         "email": row["email"],
@@ -65,22 +65,24 @@ class CheckName(Action):
                         "extra_bed": row["extra_bed"] == "True"
                     })
                     return data
-        return None
+        return data
     def addClient(self, name,email, room_booked, time_room,extra_bed) :
         # Append the new booking to the Clients.csv file
         with open("Clients.csv", "a", newline="") as file:
             writer = csv.writer(file)
             print("i am adding a row")
-            writer.writerow([name, email, "False", "False", "False", "", "False", "True", "credit card", "false", time_room, "false"])
+            writer.writerow([name, email, "False", "False", "False", 155, "False", "True", "credit card", "false", time_room, "false"])
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         name = tracker.get_slot("name")
         email = tracker.get_slot("email")
+        print(name)
+        print(email)
         data = self.read_csv_file(name, email)
         room_booked=tracker.get_slot("date")
         time_room=tracker.get_slot("time_room")
         extra_bed=tracker.get_slot("extra_bed")
-        if data==None:
+        if data==[]:
             self.addClient(name,email, room_booked, time_room,extra_bed) 
             dispatcher.utter_message("You are a new client, welcome to our hotel! If you are already a client, please ask me to repeat collecting your info.")
         else:
@@ -150,7 +152,7 @@ class ActionResponseToDate(Action):
             message = "Too many dates provided"
 
         dispatcher.utter_message(message)
-        return [SlotSet("matches", message)]
+        return []
 
 
 

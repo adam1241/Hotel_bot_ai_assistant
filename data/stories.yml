@@ -20,18 +20,25 @@ stories:
   - intent: response_restauration
   - action: utter_response_restauration
   - intent: goodbye
-  - action: utter_goodbye_not_booked
-
+  - action: utter_goodbye
 
 
 - story: late night cravings
   steps:
-  
+  - intent: greet
+  - action: utter_greet
+  - intent: provide_name
+  - action: utter_provide_name
+  - intent: provide_email
+  - slot_was_set:
+        - name: "jorge"
+        - email: "jorg.ek@jj.com"
+  - action: check_name_email
   - intent: request_room_service
   - action: utter_request_room_service
   - action: utter_ask_more_help
   - intent: deny
-  - action: utter_goodbye_booked
+  - action: utter_goodbye
 
 - story: the indecisive guest
   steps:
@@ -44,14 +51,15 @@ stories:
         - name: "jorge"
         - email: "jorg.ek@jj.com"
   - action: check_name_email
+
+  - intent: deny
+  - action: utter_ask_checkin_checkout
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
-  - intent: response_to_date
-  - action: utter_response_to_date
   - intent: cancel_reservation
   - action: utter_cancel_reservation
+  - intent: affirm
   - action: utter_report_issue
-  - action: utter_ask_more_help
   - intent: affirm
   - action: utter_ask_more_help
   - intent: deny
@@ -72,12 +80,8 @@ stories:
   - action: utter_ask_location
   - intent: ask_facilities
   - action: utter_ask_facilities
-  - intent: mood_unhappy
-  - action: utter_mood_unhappy
-  - action: utter_ask_location
   - intent: affirm
   - action: utter_request_room_service
-  - action: utter_ask_more_help
   - intent: deny
   - action: utter_goodbye
 
@@ -98,8 +102,6 @@ stories:
   - action: utter_ask_more_help
   - intent: request_room_service
   - action: utter_request_room_service
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
@@ -120,8 +122,6 @@ stories:
   - action: utter_response_restauration
   - intent: response_restauration
   - action: utter_response_restauration
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
@@ -140,8 +140,6 @@ stories:
   - action: utter_ask_facilities
   - intent: deny
   - action: utter_ask_checkin_checkout
-  - intent: affirm
-  - action: utter_happy
   - intent: report_issue
   - action: utter_report_issue
   - intent: goodbye
@@ -157,10 +155,6 @@ stories:
   - action: check_name_email
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
-  - intent: affirm
-  - action: utter_happy
-  - intent: book_room
-  - action: utter_book_room
   - intent: goodbye
   - action: utter_goodbye
 
@@ -192,16 +186,12 @@ stories:
         - name: "jorge"
         - email: "jorg.ek@jj.com"
   - action: check_name_email
-  - intent: book_room
-  - action: utter_book_room
   - intent: cancel_reservation
   - action: utter_cancel_reservation
   - intent: affirm
   - action: utter_ask_location
   - intent: ask_location
   - action: utter_ask_location
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
@@ -222,7 +212,12 @@ stories:
   - action: utter_ask_checkin_checkout
   - intent: ask_checkin_checkout
   - action: utter_ask_checkin_checkout
-  - intent: mood_great
-  - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
+
+- story: booking
+  steps:
+  - intent: response_to_date
+  - action: action_response_to_date
+  - intent: wait_for_dates
+  - action: action_booking_decision

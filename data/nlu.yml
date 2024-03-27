@@ -166,39 +166,6 @@ nlu:
     - no way
     - not really
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremely sad
-    - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -216,10 +183,6 @@ nlu:
     - Do you offer free Wi-Fi?
     - Is parking available?
     - What kind of leisure facilities can guests use?
-
-- intent: book_room
-  examples: |
-    "nooooooo"
 
 - intent: cancel_reservation
   examples: |
@@ -255,28 +218,6 @@ nlu:
     - My air conditioner is not working.
     - I have a complaint about the cleanliness.
     - The Wi-Fi connection is really poor in my room.
-
-- intent: affirm
-  examples: |
-    - yep
-    - yes
-    - yeah
-    - i guess
-    - sure
-    - oh yea
-    - ja
-
-- intent: deny
-  examples: |
-    - nope
-    - no
-    - nah
-    - i don't think so
-    - maybe not
-    - not sure
-    - oh no
-    - nein
-    
 
 - intent: goodbye
   examples: |
@@ -337,7 +278,7 @@ nlu:
     - Can I offer a suggestion to enhance the guest experience?
     - Here's an idea to make things better.
 
-- intent: ask_spa
+- intent: provide_spa
   examples: |
     - do you have a spa?
     - is there a spa on-site?
@@ -394,13 +335,6 @@ nlu:
     - what are the gym hours?
     - can I use the gym before check-in?
 
-- intent: ask_tv_channels
-  examples: |
-    - what channels do you offer on TV?
-    - can I watch [specific channel] in my room?
-    - do you have access to streaming services?
-    - what movies are available on TV?
-    - can I connect my laptop to the TV?
 
 - intent: request_movie
   examples: |
@@ -410,33 +344,11 @@ nlu:
     - how much does it cost to rent a movie?
     - how can I order a movie to my room?
 
-- intent: ask_weather
-  examples: |
-    - what's the weather like today?
-    - will it rain tomorrow?
-    - what's the forecast for the weekend?
-    - is it going to be hot tomorrow?
-    - I need to know if I should pack an umbrella
-
-- intent: book_room
-  examples: |
-    - I'd like to book a room
-    - can I make a reservation?
-    - do you have any rooms available?
-    - I'm looking to book a hotel room
-    - what's the rate for a room
-
 - intent: ask_bill
   examples: |
     - How much is my bill?
     - Can you tell me the total amount I owe?
     - What's the cost for my stay?
-
-- intent: inquire_loyalty
-  examples: |
-    - Do you have a loyalty program?
-    - How does your loyalty program work?
-    - Can you provide information about your rewards program?
 
 - intent: ask_transportation
   examples: |

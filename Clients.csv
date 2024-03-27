@@ -7,3 +7,7 @@ name,email,spa,luggage,cib,bill,loyalty,payment,payment_method,room_booked,time_
 
 ,mehdi@gmail.com,False,False,False,,False,True,credit card,false,,false
 ,mehdi@po.com,False,False,False,,False,True,credit card,false,,false
+,,False,False,False,,False,True,credit card,false,,false
+,,False,False,False,,False,True,credit card,false,,false
+adam,adam@playstore.com,False,False,False,,False,True,credit card,false,,false
+,mehdi@mehdi.com,False,False,False,,False,True,credit card,false,,false

@@ -6,6 +6,8 @@ entities:
   - name
   - email
   - date
+  - check_in
+  - check_out
 
 slots:
   name:
@@ -23,7 +25,17 @@ slots:
     mappings:
       - type: from_entity
         entity: date
+  check_in:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: check_in
 
+  check_out:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: check_out
 
 
 actions:
@@ -68,6 +80,7 @@ intents:
   - nlu_fallback
   - response_to_date
   - response_restauration
+  - wait_for_dates
 
 responses:
   utter_greet:

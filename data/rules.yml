@@ -36,7 +36,7 @@ rules:
   steps:
   - intent: response_to_date
   - action: action_response_to_date
-  - action: action_booking_decision
+  
 
 - rule: bye_booked
   steps:

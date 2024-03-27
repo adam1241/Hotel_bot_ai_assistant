@@ -122,20 +122,26 @@ class ActionResponseToDate(Action):
     
     def extract_rooms(self,in_date,out_date) :
         available_rooms = []
+        room_ids = []
+        seen = set()
         with open('rooms.csv', 'r') as file:
             csv_reader = csv.reader(file)
+            next(csv_reader)
+            print(csv_reader, type(csv_reader))
             for line in csv_reader:
                 dates = line[1].split(',')
                 available = True
                 for date_str in dates:
-                    date = datetime.strptime(date_str, "%Y-%m-%d")
-                    print(date)
+                    date = datetime.strptime(date_str, "%Y-%m-%d").date()
                     if in_date <= date <= out_date:
                         available = False
                         break  # Once a date within range is found, move to the next room
                 if available :
-                    available_rooms.append({"id" : line[0], "Type" : line[2], "View type" : line[5], "Price" : line[4], "Capacity" : line[3]})
-        return available_rooms
+                    if (line[2],line[5]) not in seen  :
+                        seen.add((line[2],line[5]))
+                        room_ids.append(line[0])
+                        available_rooms.append(f"{len(room_ids)}- Type : {line[2]}, View type : {line[5]}, Price : {line[4]}, Capacity : {line[3]}\n")
+        return available_rooms, room_ids
             
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         user_response = tracker.latest_message.get("text")
@@ -147,7 +153,7 @@ class ActionResponseToDate(Action):
             message = "You provided only one date, please provide two correct dates in the format YYYY-MM-DD or YYYY/MM/DD"
         elif len(dates) == 2 :
             rooms = self.extract_rooms(dates[0],dates[1])
-            message = f"Here are the available rooms from {dates[0]} to {dates[1]}: {rooms}"
+            message = f"Here are the available rooms from {dates[0]} to {dates[1]}:\n{''.join(rooms[0])}.\n Choose a room by selecting a number.\n If you want to cancel please enter 0"
         else : 
             message = "Too many dates provided"
 
@@ -177,4 +183,18 @@ class AddToClients(Action):
 
         dispatcher.utter_message("Your booking has been successfully added to our records.")
 
+        return []
+
+class bookingDecision(Action):
+    def name(self) -> Text:
+        return "action_booking_decision"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        user_response = tracker.latest_message.get("text")
+        try :
+            int(user_response)
+            dispatcher.utter_message("Your booking has been successfully added to our records.")
+        except TypeError :
+            dispatcher.utter_message("Invalid input. Please enter a valid number")
+            
         return []

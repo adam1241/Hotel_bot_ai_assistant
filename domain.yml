@@ -9,6 +9,29 @@ entities:
   - check_in
   - check_out
 
+synonyms:
+  - synonym: "John Doe"
+    examples: |
+      - "John"
+      - "Doe"
+  - synonym: "booking@example.com"
+    examples: |
+      - "booking email"
+      - "reservation email"
+  - synonym: "2024-12-25"
+    examples: |
+      - "Christmas Day"
+      - "25th December 2024"
+  - synonym: "2024-12-25T14:00:00Z"
+    examples: |
+      - "Check-in date"
+      - "Arrival"
+  - synonym: "2024-12-27T12:00:00Z"
+    examples: |
+      - "Check-out date"
+      - "Departure"
+
+
 slots:
   name:
     type: text

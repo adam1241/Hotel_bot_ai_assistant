@@ -68,7 +68,18 @@ def generate_random_names(num_names=100):
     names = [generate_random_name() for _ in range(num_names)]
     return names
 
-# Generate 100 random names
-random_names = generate_random_names()
-for i in random_names:
-    print(f'- [{i}](name)')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

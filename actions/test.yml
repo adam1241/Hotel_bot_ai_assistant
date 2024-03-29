@@ -1,0 +1,25 @@
+version: "3.1"
+entities:
+  - name
+
+slots:
+  name:
+
+actions:
+  - check_name_email
+
+intents:
+  - greet
+  - bot_challenge
+
+responses:
+  utter_provide_spa:
+    - text: "Absolutely! We have a luxurious spa offering a variety of treatments."
+
+  utter_ask_luggage:
+    - text:  "Sure, we offer luggage storage for your convenience."
+    
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
